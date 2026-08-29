@@ -1,0 +1,50 @@
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# --- Windows ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- VS Code ---
+.vscode/
+*.code-workspace
+
+# --- Other editors / IDEs ---
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Microsoft Word / Office temp files ---
+~$*.doc*
+~$*.xls*
+~$*.ppt*
+.~lock.*#
+
+# --- C++ build artifacts ---
+*.o
+*.obj
+*.out
+*.exe
+*.a
+*.so
+*.dylib
+eventflow
+build/
+bin/
+obj/
+
+# --- Doxygen generated output ---
+docs/html/
+docs/latex/
+
+# --- Misc ---
+*.log
+*.tmp
