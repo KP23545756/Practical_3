@@ -40,6 +40,7 @@ class EventComponent{
         /// @return Current capacity value
         virtual int getCapacity() const = 0;
         /// @brief Virtual destructor
+        /// @brief Virtual destructor   
         virtual ~EventComponent();
 };
 
