@@ -39,7 +39,6 @@ class EventComponent{
         /// @brief Get this component's effective capacity.
         /// @return Current capacity value
         virtual int getCapacity() const = 0;
-        /// @brief Virtual destructor
         /// @brief Virtual destructor   
         virtual ~EventComponent();
 };
