@@ -1,6 +1,6 @@
 # Practical 3
 
-Repository for the **Practical 3** files.
+Repository for the Practical 3 files.
 
 ## Project Structure
 
@@ -10,12 +10,12 @@ Follow the structure below when adding files to the repository:
 Practical_3/
 ├── include/
 │   ├── EventComponent.h
-│   ├── Observer.h          # Declares update() = 0 and ~Observer()
+│   ├── Observer.h
 │   └── ...
 │
 ├── src/
 │   ├── EventComponent.cpp
-│   ├── Observer.cpp        # Defines ~Observer() {}
+│   ├── Observer.cpp
 │   └── ...
 │
 ├── main.cpp
