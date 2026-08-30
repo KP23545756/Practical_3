@@ -10,7 +10,7 @@ Repository for the Practical 3 files.
 
 ## Event Concept
 
-**PixelCon** is a gaming convention coordinated by EventFlow. The venue is
+PixelCon is a gaming convention coordinated by EventFlow. The venue is
 made up of a root event containing three halls; PC Hall, Console Hall, and
 Outdoor Plaza, with PC Hall further containing a nested Tournament Zone.
 Each hall contains individually reactive operational units (gaming stations,
@@ -25,8 +25,7 @@ make
 ./eventflow
 ```
 
-Requires a C++11-compatible compiler. Run `make clean` to
-remove build artifacts.
+Requires a C++11-compatible compiler.
 
 ## Generating Documentation
 
