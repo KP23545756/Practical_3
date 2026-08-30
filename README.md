@@ -1,4 +1,4 @@
-# EventFlow — PixelCon
+# PixelCon
 
 Repository for the Practical 3 files.
 
@@ -35,7 +35,7 @@ doxygen Doxyfile
 
 Open `docs/html/index.html` in a browser.
 
-Architecture Overview
+## Architecture Overview
 
 EventFlow combines Composite and Observer. EventComponent is the shared interface for EventUnit (Leaf) and EventGroup (Composite), letting a client treat a single station or an entire hall the same way. EventGroup also acts as both Subject and Observer, so notices issued by EventControl cascade down through nested groups to whichever concrete units are registered to receive them.
 
