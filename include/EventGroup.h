@@ -1,10 +1,5 @@
 #ifndef EVENTGROUP_H
 #define EVENTGROUP_H
-<<<<<<< Updated upstream
-
-class EventGroup{
-    
-=======
 #include <vector>
 #include "EventComponent.h"
 #include "Subject.h"
@@ -66,7 +61,6 @@ class EventGroup: public Subject, public Observer,public EventComponent{
 
         void update(const Notice& notice) override;
         ~EventGroup();
->>>>>>> Stashed changes
 };
 
 #endif // EVENTGROUP_H
