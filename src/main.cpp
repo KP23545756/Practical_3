@@ -41,22 +41,22 @@ int main() {
     TicketBooth* ticketBooth = new TicketBooth("Front Ticket Booth", 25);
     VRBooth*     vrBooth     = new VRBooth("VR Demo Booth", 1);
 
-    pcHall->addChild(pcStation1);
-    pcHall->addChild(pcStation2);
-    tournamentZone->addChild(tourneyDesk);
-    pcHall->addChild(tournamentZone);  
-    consoleHall->addChild(consoleStation);
-    consoleHall->addChild(switchStation);
-    outdoorPlaza->addChild(foodVendor);
-    outdoorPlaza->addChild(merchVendor);
-    outdoorPlaza->addChild(mobileStation);
-    outdoorPlaza->addChild(infoDesk);
-    outdoorPlaza->addChild(ticketBooth);
-    outdoorPlaza->addChild(vrBooth);
+    pcHall->addChildren(pcStation1);
+    pcHall->addChildren(pcStation2);
+    tournamentZone->addChildren(tourneyDesk);
+    pcHall->addChildren(tournamentZone);  
+    consoleHall->addChildren(consoleStation);
+    consoleHall->addChildren(switchStation);
+    outdoorPlaza->addChildren(foodVendor);
+    outdoorPlaza->addChildren(merchVendor);
+    outdoorPlaza->addChildren(mobileStation);
+    outdoorPlaza->addChildren(infoDesk);
+    outdoorPlaza->addChildren(ticketBooth);
+    outdoorPlaza->addChildren(vrBooth);
 
-    pixelCon->addChild(pcHall);
-    pixelCon->addChild(consoleHall);
-    pixelCon->addChild(outdoorPlaza);
+    pixelCon->addChildren(pcHall);
+    pixelCon->addChildren(consoleHall);
+    pixelCon->addChildren(outdoorPlaza);
 
     
     EventControl control(pixelCon);
@@ -78,9 +78,9 @@ int main() {
     outdoorPlaza->attach(foodVendor);
     outdoorPlaza->attach(merchVendor);
     outdoorPlaza->attach(mobileStation);
-    outdoorPlaza->attach(infoDesk);
+    consoleHall->attach(infoDesk);
     outdoorPlaza->attach(ticketBooth);
-    outdoorPlaza->attach(vrBooth);
+    pcHall->attach(vrBooth);
 
     pixelCon->open();
     mobileStation->joinQueue();
@@ -116,8 +116,8 @@ int main() {
 
     // Runtime reorganisation: move the mobile station to Console Hall 
     cout << "\n===== Runtime reorganisation: moving Roaming Help Cart to Console Hall =====" << endl;
-    EventComponent* relocated = outdoorPlaza->removeChild(mobileStation); // also detaches it
-    consoleHall->addChild(relocated);
+    EventComponent* relocated = outdoorPlaza->removeChildren(mobileStation); // also detaches it
+    consoleHall->addChildren(relocated);
     consoleHall->attach(mobileStation);
     mobileStation->joinQueue();
 

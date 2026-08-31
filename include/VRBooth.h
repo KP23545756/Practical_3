@@ -1,6 +1,8 @@
 #pragma once
 #include "EventUnit.h"
-
+#include <string>
+struct Notice;
+using namespace std;
 class VRBooth : public EventUnit {
 private:
     bool isOpen;

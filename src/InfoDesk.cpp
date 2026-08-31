@@ -1,7 +1,9 @@
 #include "InfoDesk.h"
 #include "Notice.h"
 #include <iostream>
-using namespace std;
+#include <string>
+struct Notice;
+
 
 InfoDesk::InfoDesk(string name, int capacity, string initialAnnoucement) : EventUnit(name, capacity), fullyStaffed(true), announcement(initialAnnoucement) {}
 
@@ -29,7 +31,7 @@ void InfoDesk::update(const Notice& notice) {
         case NoticeType::OPEN:
             announcement = "Doors are open! " + notice.message;
             break;
-        case NoticeType::CLOSE:
+        case NoticeType::CLOSED:
             announcement = "Area closing: " + notice.message;
             break;
         case NoticeType::SCHEDULE_CHANGE:

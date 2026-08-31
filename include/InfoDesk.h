@@ -1,6 +1,8 @@
 #pragma once
 #include "EventUnit.h"
-
+#include <string>
+using namespace std;
+struct Notice;
 
 class InfoDesk : public EventUnit {
 private:

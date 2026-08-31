@@ -1,5 +1,8 @@
 #pragma once
 #include "EventUnit.h"
+#include <string>
+using namespace std;
+struct Notice;
 
 class TicketBooth : public EventUnit{
 private:
