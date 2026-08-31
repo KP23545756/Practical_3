@@ -21,6 +21,7 @@ depending on their own type and state.
 ## Building
 
 ```bash
+make all
 ./eventflow
 ```
 
