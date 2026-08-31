@@ -18,7 +18,7 @@ void MerchVendor::reportStatus() const{
 
 int MerchVendor::getCapacity() const{
     return stockLevel;
-
+}
 void MerchVendor::update(const Notice& notice){
     switch(notice.type){
         case NoticeType::CAPACITY_ALERT:
