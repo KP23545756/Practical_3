@@ -1,5 +1,6 @@
 #ifndef OBSERVER_H
 #define OBSERVER_H
+#include "Notice.h"
 struct Notice;
 /**
  * @brief GoF Observer role.

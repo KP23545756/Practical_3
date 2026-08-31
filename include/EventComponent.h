@@ -1,6 +1,8 @@
 #ifndef EVENTCOMPONENT_H
 #define EVENTCOMPONENT_H
 #include <string>
+#include "Notice.h"
+
 /**
  * @brief Abstract Component role in the Composite pattern
  * Interface used by every operatioal unit in eventflow.
