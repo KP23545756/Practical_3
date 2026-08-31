@@ -1,19 +1,26 @@
-CXX := g++
-CXXFLAGS := -std=c++11 -Wall -Iinclude
-TARGET := eventflow
+CXX      := g++
+CXXFLAGS := -std=c++11 -Wall -Wextra -Iinclude
 
-SRC := main.cpp $(wildcard src/*.cpp)
-OBJ := $(SRC:.cpp=.o)
+TARGET   := eventflow
 
-.PHONY: all clean
+SRC      := $(wildcard src/*.cpp)
+OBJ      := $(SRC:src/%.cpp=obj/%.o)
 
-all: $(TARGET)
+.PHONY: all clean valgrind directories
+
+all: directories $(TARGET)
+
+directories:
+	@mkdir -p obj
 
 $(TARGET): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJ)
+	$(CXX) $(CXXFLAGS) -o $@ $(OBJ)
 
-%.o: %.cpp
+obj/%.o: src/%.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+valgrind: $(TARGET)
+	valgrind --leak-check=full --show-leak-kinds=all ./$(TARGET)
+
 clean:
-	rm -f $(TARGET) $(OBJ)
+	rm -rf $(TARGET) obj
