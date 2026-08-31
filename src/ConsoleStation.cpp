@@ -33,7 +33,6 @@ void ConsoleStation::reportStatus() const{
     else{
         signUpStatus = "Open";
     }
-
     std::cout << name << " - " << openStatus<< ", Sign-ups: " << signUpStatus<< ", Active sessions: " << activeSessions << std::endl;
 }
 
