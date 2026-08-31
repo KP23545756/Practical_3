@@ -1,6 +1,6 @@
 #ifndef CONSOLESTATION_H
 #define CONSOLESTATION_H
-#include <string>
+
 #include "EventUnit.h"
 class ConsoleStation: public EventUnit{
     private:
@@ -12,11 +12,11 @@ class ConsoleStation: public EventUnit{
         int activeSessions;
     public:
         ConsoleStation(std::string name, int capacity);
-        void open();
-        void close();
-        void reportStatus() const;
-        int getCapacity() const;
-        void update(const Notice&);
+        void open() override;
+        void close() override;
+        void reportStatus() const override;
+        int getCapacity() const override;
+        void update(const Notice&) override;
         void startSession();
         void endSession();
 };
