@@ -15,7 +15,7 @@ public:
     /**
      * @brief Construct a merch vendor.
      * @param name Display name.
-     * @param capacity Unused for this leaf (stock is tracked separately).
+     * @param capacity amount of customers allowed in store etc.
      * @param stock Starting stock level.
      */
     MerchVendor(std::string name, int capacity, int stock = 100);

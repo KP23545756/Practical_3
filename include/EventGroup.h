@@ -10,12 +10,8 @@
  * @brief GoF Composite role, and simultaneously both Subject and Observer.
  *
  * EventGroup plays three roles for three different reasons:
- *  - Composite: it owns a list of child EventComponent* (Leaves and/or
- *    further EventGroups) and implements open/close/reportStatus/
- *    getCapacity recursively over that tree.
- *  - Subject: it can have its own observers (typically its children,
- *    if they are also registered) attached to it, and notify() pushes
- *    a Notice down to them.
+ *  - Composite: it owns a list of child EventComponent* and implements open/close/reportStatus/getCapacity recursively over that tree.
+ *  - Subject: it can have its own observers attached to it, and notify() pushes a Notice down to them.
  *  - Observer: it can itself be attach()ed to a parent EventGroup or to
  *    EventControl, so that a notice issued above cascades down to it
  *    and, via its own notify(), further down again.
@@ -45,7 +41,7 @@ class EventGroup: public Subject, public Observer,public EventComponent{
          * If the child was also registered as this group's observer, it is
          * detach()ed.
          * method never deletes the child, so it can be re-parented elsewhere.
-         * @param child Component to remove (matched by pointer).
+         * @param child Component to remove.
          * @return The removed component, or nullptr if not found.
          */
         EventComponent* removeChildren(EventComponent*);

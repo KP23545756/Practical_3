@@ -19,7 +19,7 @@ enum NoticeType{
  * @brief Represents a notice/event sent to observers.
  * 
  * A Notice contains the type of event, a descriptive message,
- * and an optional numerical value associated with the event.
+ * and a numerical value.
  */
 struct Notice{
     NoticeType type;

@@ -28,8 +28,7 @@ public:
     void update(const Notice& notice) override;
     /**
      * @brief Swap the game currently running on this station.
-     * @param gameName Name of the game to load. Ignored if the station
-     * is not currently open.
+     * @param gameName Name of the game to load.
      */
     void setGame(std::string gameName);
 };

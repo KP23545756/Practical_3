@@ -6,7 +6,7 @@ struct Notice;
  * @brief Concrete Leaf: a portable Switch station.
  *
  * Reduced effective capacity while running in portable/battery mode.
- * Ignores most notices - only a genuine evacuation moves it.
+ * Ignores most notices.
  */
 class SwitchStation:public EventUnit{
 private:
@@ -26,11 +26,11 @@ public:
     int getCapacity() const override;
     void update(const Notice& notice) override;
     /**
-     * @brief Switch into docked mode (full capacity).
+     * @brief Switch into docked mode.
      */
     void dock();
     /**
-     * @brief Switch into portable/battery mode (reduced capacity).
+     * @brief Switch into portable/battery mode.
      */
     void undock();
 };
