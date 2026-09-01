@@ -1,0 +1,30 @@
+\doxysection{Mobile\+Station.\+h}
+\hypertarget{_mobile_station_8h_source}{}\label{_mobile_station_8h_source}\index{include/MobileStation.h@{include/MobileStation.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}EventUnit.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_notice}{Notice}};}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }MobileStation\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{EventUnit}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{bool}\ isitopen;}
+\DoxyCodeLine{00011\ \ \ \ \ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ queueLength;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ MobileStation(\textcolor{keywordtype}{string}\ \doxymbox{\hyperlink{class_event_component_a82348aef118d5b35e0962a4f632cbd19}{name}},\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_event_component_ae4b041c98bc58d53783231ae2e8f626b}{capacity}});}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_mobile_station_a52c3e7bec1c57f8942fb27862280082a}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_mobile_station_a91d3e8304c3d58dd237ea32f861f6316}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_mobile_station_a37bcb8747e5f7ed0e0a1d52ee609602a}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_mobile_station_a4ffa93fe543a75de2f569cb3540509d5}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_mobile_station_a18bf8e9e98a2166e183a0bfe12a7da31}{update}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_notice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ joinQueue();}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ leaveQueue();}
+\DoxyCodeLine{00024\ \};}
+
+\end{DoxyCode}

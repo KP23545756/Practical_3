@@ -1,0 +1,169 @@
+\doxysection{Ticket\+Booth Class Reference}
+\hypertarget{class_ticket_booth}{}\label{class_ticket_booth}\index{TicketBooth@{TicketBooth}}
+
+
+Sells entry/\+upgrade tickets at a fixed point in the venue.  
+
+
+
+
+{\ttfamily \+\#include $<$Ticket\+Booth.\+h$>$}
+
+Inheritance diagram for Ticket\+Booth:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_ticket_booth}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_ticket_booth_aab41a80f4a275862a82a27c627c578c8}{Ticket\+Booth}} (string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{class_ticket_booth}{Ticket\+Booth}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_ticket_booth_ae265e5e1c407d9d884aa8a4b8a9ea611}{open}} () override
+\begin{DoxyCompactList}\small\item\em Opens sales, unless the booth is locked by an evacuation. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_ticket_booth_aa15a51549b245b5b4e7e79ef5b46741d}{close}} () override
+\begin{DoxyCompactList}\small\item\em Stops selling tickets. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_ticket_booth_a65f389ea12eceee47ed3356597267aea}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Prints sales status and evacuation-\/lock status. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_ticket_booth_a692d535e211aa58b0e7d105101299ba5}{get\+Capacity}} () const override
+\item 
+void \doxymbox{\hyperlink{class_ticket_booth_ae2f9c7c897bc98081df886f5c62f80ce}{update}} (const \doxymbox{\hyperlink{struct_notice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Reacts to a cascaded \doxylink{struct_notice}{Notice}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_unit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{Event\+Unit}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Forward name/\+capacity to \doxylink{class_event_component}{Event\+Component}. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_event_unit_a1e6fc3a03c85f7e21f8ed6865de99974}{\texorpdfstring{$\sim$}{\string~}\+Event\+Unit}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}{Event\+Component}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Construct a component with a name and a starting capacity. Base constructor, as in no validation is done. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_observer}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor: \doxylink{class_observer}{Observer} is a polymorphic base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of component like PC station 1. \end{DoxyCompactList}\item 
+int {\bfseries capacity}
+\begin{DoxyCompactList}\small\item\em Capacity size of component leaf will store own value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Sells entry/\+upgrade tickets at a fixed point in the venue. 
+
+\label{class_ticket_booth_doc-constructors}
+\Hypertarget{class_ticket_booth_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ticket_booth_aab41a80f4a275862a82a27c627c578c8}\index{TicketBooth@{TicketBooth}!TicketBooth@{TicketBooth}}
+\index{TicketBooth@{TicketBooth}!TicketBooth@{TicketBooth}}
+\doxysubsubsection{\texorpdfstring{TicketBooth()}{TicketBooth()}}
+{\footnotesize\ttfamily \label{class_ticket_booth_aab41a80f4a275862a82a27c627c578c8} 
+Ticket\+Booth::\+\+Ticket\+Booth (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{class_ticket_booth}{Ticket\+Booth}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Display name for this booth. \\
+\hline
+{\em capacity} & Maximum queue/\+service capacity. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_ticket_booth_doc-func-members}
+\Hypertarget{class_ticket_booth_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ticket_booth_aa15a51549b245b5b4e7e79ef5b46741d}\index{TicketBooth@{TicketBooth}!close@{close}}
+\index{close@{close}!TicketBooth@{TicketBooth}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_ticket_booth_aa15a51549b245b5b4e7e79ef5b46741d} 
+void Ticket\+Booth::\+close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Stops selling tickets. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+\Hypertarget{class_ticket_booth_a692d535e211aa58b0e7d105101299ba5}\index{TicketBooth@{TicketBooth}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!TicketBooth@{TicketBooth}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily \label{class_ticket_booth_a692d535e211aa58b0e7d105101299ba5} 
+int Ticket\+Booth::\+get\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The booth\textquotesingle{}s current effective capacity. 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}{Event\+Component}}.
+
+\Hypertarget{class_ticket_booth_ae265e5e1c407d9d884aa8a4b8a9ea611}\index{TicketBooth@{TicketBooth}!open@{open}}
+\index{open@{open}!TicketBooth@{TicketBooth}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \label{class_ticket_booth_ae265e5e1c407d9d884aa8a4b8a9ea611} 
+void Ticket\+Booth::\+open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Opens sales, unless the booth is locked by an evacuation. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+\Hypertarget{class_ticket_booth_a65f389ea12eceee47ed3356597267aea}\index{TicketBooth@{TicketBooth}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!TicketBooth@{TicketBooth}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily \label{class_ticket_booth_a65f389ea12eceee47ed3356597267aea} 
+void Ticket\+Booth::\+report\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Prints sales status and evacuation-\/lock status. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+\Hypertarget{class_ticket_booth_ae2f9c7c897bc98081df886f5c62f80ce}\index{TicketBooth@{TicketBooth}!update@{update}}
+\index{update@{update}!TicketBooth@{TicketBooth}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_ticket_booth_ae2f9c7c897bc98081df886f5c62f80ce} 
+void Ticket\+Booth::\+update (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_notice}{Notice}} \&}]{notice}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reacts to a cascaded \doxylink{struct_notice}{Notice}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & The notice broadcast by this unit\textquotesingle{}s parent \doxylink{class_event_group}{Event\+Group}. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{class_event_unit_adca0361187e0c7f4963aadfb70cb556f}{Event\+Unit}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/Ticket\+Booth.\+h\item 
+src/Ticket\+Booth.\+cpp\end{DoxyCompactItemize}

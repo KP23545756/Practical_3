@@ -1,0 +1,120 @@
+\doxysection{Event\+Unit Class Reference}
+\hypertarget{class_event_unit}{}\label{class_event_unit}\index{EventUnit@{EventUnit}}
+
+
+Abstract Leaf role in Composite, and simultaneously an abstract \doxylink{class_observer}{Observer}.  
+
+
+
+
+{\ttfamily \+\#include $<$Event\+Unit.\+h$>$}
+
+Inheritance diagram for Event\+Unit:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_event_unit}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{Event\+Unit}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Forward name/\+capacity to \doxylink{class_event_component}{Event\+Component}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_event_unit_adca0361187e0c7f4963aadfb70cb556f}{update}} (const \doxymbox{\hyperlink{struct_notice}{Notice}} \&notice) override=0
+\begin{DoxyCompactList}\small\item\em Every concrete leaf must define its own reaction to a \doxylink{struct_notice}{Notice}. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_event_unit_a1e6fc3a03c85f7e21f8ed6865de99974}{\texorpdfstring{$\sim$}{\string~}\+Event\+Unit}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}{Event\+Component}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Construct a component with a name and a starting capacity. Base constructor, as in no validation is done. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_component_ada5f41377769e0cbdaa7546477b3970c}{open}} ()=0
+\begin{DoxyCompactList}\small\item\em Open this component. A leaf opens itself. A composite is expected to open its children. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_component_a8e13a68d681c1b6affcf13435a09adab}{close}} ()=0
+\begin{DoxyCompactList}\small\item\em Close this component. Opposite of open. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_component_a625b1459850d5a94793c54404a280231}{report\+Status}} () const =0
+\begin{DoxyCompactList}\small\item\em Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. \end{DoxyCompactList}\item 
+virtual int \doxymbox{\hyperlink{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}{get\+Capacity}} () const =0
+\begin{DoxyCompactList}\small\item\em Get this component\textquotesingle{}s effective capacity. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_observer}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor: \doxylink{class_observer}{Observer} is a polymorphic base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of component like PC station 1. \end{DoxyCompactList}\item 
+int {\bfseries capacity}
+\begin{DoxyCompactList}\small\item\em Capacity size of component leaf will store own value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract Leaf role in Composite, and simultaneously an abstract \doxylink{class_observer}{Observer}. 
+
+\doxylink{class_event_unit}{Event\+Unit} is the common base for every concrete operational unit. 
+
+\label{class_event_unit_doc-constructors}
+\Hypertarget{class_event_unit_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_event_unit_ad146bb4d502546964f97d66e47769d67}\index{EventUnit@{EventUnit}!EventUnit@{EventUnit}}
+\index{EventUnit@{EventUnit}!EventUnit@{EventUnit}}
+\doxysubsubsection{\texorpdfstring{EventUnit()}{EventUnit()}}
+{\footnotesize\ttfamily \label{class_event_unit_ad146bb4d502546964f97d66e47769d67} 
+Event\+Unit::\+\+Event\+Unit (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Forward name/\+capacity to \doxylink{class_event_component}{Event\+Component}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Display name of the unit. \\
+\hline
+{\em capacity} & Starting capacity (headcount, stock, etc. depending on the concrete unit). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_event_unit_a1e6fc3a03c85f7e21f8ed6865de99974}\index{EventUnit@{EventUnit}!````~EventUnit@{\texorpdfstring{$\sim$}{\string~}EventUnit}}
+\index{````~EventUnit@{\texorpdfstring{$\sim$}{\string~}EventUnit}!EventUnit@{EventUnit}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}EventUnit()}{\string~EventUnit()}}
+{\footnotesize\ttfamily \label{class_event_unit_a1e6fc3a03c85f7e21f8ed6865de99974} 
+Event\+Unit::\+\texorpdfstring{$\sim$}{\string~}\+Event\+Unit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor. 
+
+\doxylink{class_event_unit}{Event\+Unit} still has no resources of its own to release -\/ each concrete leaf\textquotesingle{}s own destructor handles anything it added. 
+
+\label{class_event_unit_doc-func-members}
+\Hypertarget{class_event_unit_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_event_unit_adca0361187e0c7f4963aadfb70cb556f}\index{EventUnit@{EventUnit}!update@{update}}
+\index{update@{update}!EventUnit@{EventUnit}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_event_unit_adca0361187e0c7f4963aadfb70cb556f} 
+void Event\+Unit::\+update (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_notice}{Notice}} \&}]{notice}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+
+
+
+Every concrete leaf must define its own reaction to a \doxylink{struct_notice}{Notice}. 
+
+
+
+Implements \doxymbox{\hyperlink{class_observer_a1facbbd0e34f6034d183ae9bcabbf1b0}{Observer}}.
+
+
+
+Implemented in \doxymbox{\hyperlink{class_console_station_aab1fa533323f8a4ef2f4a8a091bbebf3}{Console\+Station}}, \doxymbox{\hyperlink{class_food_vendor_ae569b3f50083769d3495c31a80840e24}{Food\+Vendor}}, \doxymbox{\hyperlink{class_info_desk_a8c988a07d5b94291787b348173ddd9fa}{Info\+Desk}}, \doxymbox{\hyperlink{class_merch_vendor_a016366a090815ebe97283b9f0cb98279}{Merch\+Vendor}}, \doxymbox{\hyperlink{class_mobile_station_a18bf8e9e98a2166e183a0bfe12a7da31}{Mobile\+Station}}, \doxymbox{\hyperlink{class_p_c_station_ab651476973de3ca0b37c91952439d228}{PCStation}}, \doxymbox{\hyperlink{class_switch_station_a929b4f335e944baae0eeeadb3626a53e}{Switch\+Station}}, \doxymbox{\hyperlink{class_ticket_booth_ae2f9c7c897bc98081df886f5c62f80ce}{Ticket\+Booth}}, \doxymbox{\hyperlink{class_tournament_desk_a055aeedd432e780d6444e6caaeeb35b9}{Tournament\+Desk}}, and \doxymbox{\hyperlink{class_v_r_booth_a12a6d7eb83577b6fb588ff778e9ebb65}{VRBooth}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/Event\+Unit.\+h\item 
+src/Event\+Unit.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,64 @@
+\chapter{Pixel\+Con }
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{PixelCon@{PixelCon}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+
+
+Repository for the Practical 3 files.\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Team Members}{Team Members}}\label{md__r_e_a_d_m_e_autotoc_md1}
+
+\begin{DoxyItemize}
+\item Kyle Pillay
+\item Takunda Mugwagwa
+\item Brett Pitts
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{Event Concept}{Event Concept}}\label{md__r_e_a_d_m_e_autotoc_md2}
+Pixel\+Con is a gaming convention coordinated by Event\+Flow. The venue is made up of a root event containing three halls; PC Hall, Console Hall, and Outdoor Plaza, with PC Hall further containing a nested Tournament Zone. Each hall contains individually reactive operational units (gaming stations, booths, desks, vendors) that respond differently to the same event-\/wide notices (schedule changes, capacity alerts, weather alerts, evacuation, etc.) depending on their own type and state.\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{Building}{Building}}\label{md__r_e_a_d_m_e_autotoc_md3}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{make\ }
+\DoxyCodeLine{./eventflow}
+
+\end{DoxyCode}
+
+
+Requires a C++11-\/compatible compiler.\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Generating Documentation}{Generating Documentation}}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{doxygen\ Doxyfile}
+
+\end{DoxyCode}
+
+
+Open {\ttfamily docs/\+html/\+index.\+html} in a browser.\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{Architecture Overview}{Architecture Overview}}\label{md__r_e_a_d_m_e_autotoc_md5}
+Event\+Flow combines Composite and \doxylink{class_observer}{Observer}. \doxylink{class_event_component}{Event\+Component} is the shared interface for \doxylink{class_event_unit}{Event\+Unit} (Leaf) and \doxylink{class_event_group}{Event\+Group} (Composite), letting a client treat a single station or an entire hall the same way. \doxylink{class_event_group}{Event\+Group} also acts as both \doxylink{class_subject}{Subject} and \doxylink{class_observer}{Observer}, so notices issued by \doxylink{class_event_control}{Event\+Control} cascade down through nested groups to whichever concrete units are registered to receive them.\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysection{\texorpdfstring{Project Structure}{Project Structure}}\label{md__r_e_a_d_m_e_autotoc_md6}
+Follow the structure below when adding files to the repository:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Practical\_3/}
+\DoxyCodeLine{├──\ include/}
+\DoxyCodeLine{│\ \ \ ├──\ EventComponent.h}
+\DoxyCodeLine{│\ \ \ ├──\ Observer.h}
+\DoxyCodeLine{│\ \ \ └──\ ...}
+\DoxyCodeLine{│}
+\DoxyCodeLine{├──\ src/}
+\DoxyCodeLine{│\ \ \ ├──\ EventComponent.cpp}
+\DoxyCodeLine{│\ \ \ ├──\ Observer.cpp}
+\DoxyCodeLine{│\ \ \ └──\ ...}
+\DoxyCodeLine{│}
+\DoxyCodeLine{├──\ main.cpp}
+\DoxyCodeLine{├──\ Makefile}
+\DoxyCodeLine{└──\ Anything\ else}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysection{\texorpdfstring{Branching Strategy}{Branching Strategy}}\label{md__r_e_a_d_m_e_autotoc_md7}
+Use feature branches for individual pieces of functionality. Merge completed work into main.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{main}
+\DoxyCodeLine{├──\ feature/event-\/component}
+\DoxyCodeLine{├──\ feature/observer-\/subject}
+\DoxyCodeLine{└──\ feature/leaves-\/batch1}
+
+\end{DoxyCode}
+ 

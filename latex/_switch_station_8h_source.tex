@@ -1,0 +1,25 @@
+\doxysection{Switch\+Station.\+h}
+\hypertarget{_switch_station_8h_source}{}\label{_switch_station_8h_source}\index{include/SwitchStation.h@{include/SwitchStation.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SWITCHSTATION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SWITCHSTATION\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}EventUnit.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_notice}{Notice}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_switch_station_a69fd553643fb831a75c3ae4f183ad399}{SwitchStation}}:\textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{EventUnit}}\{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ isOpen;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ portableMode;}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{class_switch_station_a69fd553643fb831a75c3ae4f183ad399}{SwitchStation}}(std::string\ \doxymbox{\hyperlink{class_event_component_a82348aef118d5b35e0962a4f632cbd19}{name}},\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_event_component_ae4b041c98bc58d53783231ae2e8f626b}{capacity}},\ \textcolor{keywordtype}{bool}\ startsPortable\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_switch_station_ac185fe1d66f9b1c6d4f4a572a025ded1}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_switch_station_a3ec11bc5603f84d1fa6d0ab6f2d792eb}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_switch_station_a91555f8552c5e14b9d2a9f64c133f5e1}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_switch_station_ac8b769ecc7fa90d9b61bc430344f8a22}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_switch_station_a929b4f335e944baae0eeeadb3626a53e}{update}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_notice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_switch_station_a30c2ed60a286d6efc2ab0edab77af8fa}{dock}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_switch_station_abbc5df869be6608f9eb0da76d67842c0}{undock}}();}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SWITCHSTATION\_H}}
+
+\end{DoxyCode}

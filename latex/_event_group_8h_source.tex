@@ -1,0 +1,32 @@
+\doxysection{Event\+Group.\+h}
+\hypertarget{_event_group_8h_source}{}\label{_event_group_8h_source}\index{include/EventGroup.h@{include/EventGroup.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EVENTGROUP\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EVENTGROUP\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}EventComponent.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Subject.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Observer.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_event_group_a3116d08596ad468f67dca69c8ec5c4f9}{EventGroup}}:\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_subject}{Subject}},\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_observer}{Observer}},\textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}{EventComponent}}\{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ std::vector<EventComponent*>\ children;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_event_group_a3116d08596ad468f67dca69c8ec5c4f9}{EventGroup}}(std::string\ \doxymbox{\hyperlink{class_event_component_a82348aef118d5b35e0962a4f632cbd19}{name}});}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_event_group_aba5ef7c4d9ae1feba627a735882713d8}{addChildren}}(\doxymbox{\hyperlink{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}{EventComponent}}*);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}{EventComponent}}*\ \doxymbox{\hyperlink{class_event_group_a85e04d8b8459cc89f4a2b979fc2c54e6}{removeChildren}}(\doxymbox{\hyperlink{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}{EventComponent}}*);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_event_group_aa12055a0456c9e6faf6de3a12a70b0e1}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_event_group_a600460d78e6fc8d0ec13b1767590dcc9}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_event_group_abc6919ac70ecf081cdec8c3ffaadc89e}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_event_group_affe035069afc221547fe9e848017ee3c}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_event_group_a49dd237deffcde74961175a84a7c0256}{update}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_notice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_event_group_a3116d08596ad468f67dca69c8ec5c4f9}{\string~EventGroup}}();}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ EVENTGROUP\_H}}
+
+\end{DoxyCode}

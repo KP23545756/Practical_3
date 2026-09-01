@@ -1,0 +1,224 @@
+\doxysection{Event\+Group Class Reference}
+\hypertarget{class_event_group}{}\label{class_event_group}\index{EventGroup@{EventGroup}}
+
+
+GoF Composite role, and simultaneously both \doxylink{class_subject}{Subject} and \doxylink{class_observer}{Observer}.  
+
+
+
+
+{\ttfamily \+\#include $<$Event\+Group.\+h$>$}
+
+Inheritance diagram for Event\+Group:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_event_group}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_group_a3116d08596ad468f67dca69c8ec5c4f9}{Event\+Group}} (std::\+string name)
+\begin{DoxyCompactList}\small\item\em Construct a named group. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_event_group_aba5ef7c4d9ae1feba627a735882713d8}{add\+Children}} (\doxymbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Add a child to this group\textquotesingle{}s ownership tree. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_event_group_a85e04d8b8459cc89f4a2b979fc2c54e6}{remove\+Children}} (\doxymbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Remove a child from this group\textquotesingle{}s ownership tree. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_event_group_aa12055a0456c9e6faf6de3a12a70b0e1}{open}} () override
+\begin{DoxyCompactList}\small\item\em Open this component. A leaf opens itself. A composite is expected to open its children. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_event_group_a600460d78e6fc8d0ec13b1767590dcc9}{close}} () override
+\begin{DoxyCompactList}\small\item\em Close this component. Opposite of open. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_event_group_abc6919ac70ecf081cdec8c3ffaadc89e}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_event_group_affe035069afc221547fe9e848017ee3c}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Get this component\textquotesingle{}s effective capacity. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_event_group_a49dd237deffcde74961175a84a7c0256}{update}} (const \doxymbox{\hyperlink{struct_notice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em React to a notice pushed from above, then cascade it down. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_subject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_subject_a0884bfe374d352c6488a1e40c84246c8}{attach}} (\doxymbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Register an observer to receive future notices. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_subject_a752a7596d52ab986539232f8377ca92c}{detach}} (\doxymbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Remove a previously registered observer. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_subject_ab5b0a79cd1214e08f11dbe18611e8f8c}{notify}} (const \doxymbox{\hyperlink{struct_notice}{Notice}} \&notice)
+\begin{DoxyCompactList}\small\item\em Push a notice to every currently registered observer. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Subject} ()
+\begin{DoxyCompactList}\small\item\em Clears the observer list. Never deletes the observers themselves -\/ \doxylink{class_subject}{Subject} does not own them. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_observer}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor: \doxylink{class_observer}{Observer} is a polymorphic base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}{Event\+Component}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Construct a component with a name and a starting capacity. Base constructor, as in no validation is done. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_subject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries observers}
+\begin{DoxyCompactList}\small\item\em Non-\/owning pointers to registered observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of component like PC station 1. \end{DoxyCompactList}\item 
+int {\bfseries capacity}
+\begin{DoxyCompactList}\small\item\em Capacity size of component leaf will store own value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+GoF Composite role, and simultaneously both \doxylink{class_subject}{Subject} and \doxylink{class_observer}{Observer}. 
+
+\doxylink{class_event_group}{Event\+Group} plays three roles for three different reasons:
+\begin{DoxyItemize}
+\item Composite: it owns a list of child Event\+Component\texorpdfstring{$\ast$}{*} and implements open/\+close/\+report\+Status/\+get\+Capacity recursively over that tree.
+\item \doxylink{class_subject}{Subject}: it can have its own observers attached to it, and \doxylink{class_subject_ab5b0a79cd1214e08f11dbe18611e8f8c}{notify()} pushes a \doxylink{struct_notice}{Notice} down to them.
+\item \doxylink{class_observer}{Observer}: it can itself be \doxylink{class_subject_a0884bfe374d352c6488a1e40c84246c8}{attach()}ed to a parent \doxylink{class_event_group}{Event\+Group} or to \doxylink{class_event_control}{Event\+Control}, so that a notice issued above cascades down to it and, via its own \doxylink{class_subject_ab5b0a79cd1214e08f11dbe18611e8f8c}{notify()}, further down again. 
+\end{DoxyItemize}
+
+\label{class_event_group_doc-constructors}
+\Hypertarget{class_event_group_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_event_group_a3116d08596ad468f67dca69c8ec5c4f9}\index{EventGroup@{EventGroup}!EventGroup@{EventGroup}}
+\index{EventGroup@{EventGroup}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{EventGroup()}{EventGroup()}}
+{\footnotesize\ttfamily \label{class_event_group_a3116d08596ad468f67dca69c8ec5c4f9} 
+Event\+Group::\+\+Event\+Group (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Construct a named group. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Display name of this group \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_event_group_doc-func-members}
+\Hypertarget{class_event_group_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_event_group_aba5ef7c4d9ae1feba627a735882713d8}\index{EventGroup@{EventGroup}!addChildren@{addChildren}}
+\index{addChildren@{addChildren}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{addChildren()}{addChildren()}}
+{\footnotesize\ttfamily \label{class_event_group_aba5ef7c4d9ae1feba627a735882713d8} 
+void Event\+Group::\+add\+Children (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{child}{}\end{DoxyParamCaption})}
+
+
+
+Add a child to this group\textquotesingle{}s ownership tree. 
+
+Does NOT call \doxylink{class_subject_a0884bfe374d352c6488a1e40c84246c8}{attach()}, Composite membership and \doxylink{class_observer}{Observer} 
+\begin{DoxyParams}{Parameters}
+{\em child} & Component to add. This group takes ownership of it. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_event_group_a600460d78e6fc8d0ec13b1767590dcc9}\index{EventGroup@{EventGroup}!close@{close}}
+\index{close@{close}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_event_group_a600460d78e6fc8d0ec13b1767590dcc9} 
+void Event\+Group::\+close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Close this component. Opposite of open. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+\Hypertarget{class_event_group_affe035069afc221547fe9e848017ee3c}\index{EventGroup@{EventGroup}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily \label{class_event_group_affe035069afc221547fe9e848017ee3c} 
+int Event\+Group::\+get\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get this component\textquotesingle{}s effective capacity. 
+
+\begin{DoxyReturn}{Returns}
+Current capacity value 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}{Event\+Component}}.
+
+\Hypertarget{class_event_group_aa12055a0456c9e6faf6de3a12a70b0e1}\index{EventGroup@{EventGroup}!open@{open}}
+\index{open@{open}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \label{class_event_group_aa12055a0456c9e6faf6de3a12a70b0e1} 
+void Event\+Group::\+open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Open this component. A leaf opens itself. A composite is expected to open its children. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+\Hypertarget{class_event_group_a85e04d8b8459cc89f4a2b979fc2c54e6}\index{EventGroup@{EventGroup}!removeChildren@{removeChildren}}
+\index{removeChildren@{removeChildren}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{removeChildren()}{removeChildren()}}
+{\footnotesize\ttfamily \label{class_event_group_a85e04d8b8459cc89f4a2b979fc2c54e6} 
+\doxymbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*} Event\+Group::\+remove\+Children (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{child}{}\end{DoxyParamCaption})}
+
+
+
+Remove a child from this group\textquotesingle{}s ownership tree. 
+
+If the child was also registered as this group\textquotesingle{}s observer, it is \doxylink{class_subject_a752a7596d52ab986539232f8377ca92c}{detach()}ed. method never deletes the child, so it can be re-\/parented elsewhere. 
+\begin{DoxyParams}{Parameters}
+{\em child} & Component to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The removed component, or nullptr if not found. 
+\end{DoxyReturn}
+\Hypertarget{class_event_group_abc6919ac70ecf081cdec8c3ffaadc89e}\index{EventGroup@{EventGroup}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily \label{class_event_group_abc6919ac70ecf081cdec8c3ffaadc89e} 
+void Event\+Group::\+report\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+\Hypertarget{class_event_group_a49dd237deffcde74961175a84a7c0256}\index{EventGroup@{EventGroup}!update@{update}}
+\index{update@{update}!EventGroup@{EventGroup}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_event_group_a49dd237deffcde74961175a84a7c0256} 
+void Event\+Group::\+update (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_notice}{Notice}} \&}]{notice}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+React to a notice pushed from above, then cascade it down. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & The notice pushed from above. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{class_observer_a1facbbd0e34f6034d183ae9bcabbf1b0}{Observer}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/Event\+Group.\+h\item 
+src/Event\+Group.\+cpp\end{DoxyCompactItemize}

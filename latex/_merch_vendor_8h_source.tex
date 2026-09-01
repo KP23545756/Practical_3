@@ -1,0 +1,27 @@
+\doxysection{Merch\+Vendor.\+h}
+\hypertarget{_merch_vendor_8h_source}{}\label{_merch_vendor_8h_source}\index{include/MerchVendor.h@{include/MerchVendor.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MERCHVENDOR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MERCHVENDOR\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}EventUnit.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_notice}{Notice}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_merch_vendor_ad62fdf72fc1fafbc1f7962544381ac1d}{MerchVendor}}:\textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{EventUnit}}\{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{bool}\ isOpen;}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ stockLevel;}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{class_merch_vendor_ad62fdf72fc1fafbc1f7962544381ac1d}{MerchVendor}}(std::string\ \doxymbox{\hyperlink{class_event_component_a82348aef118d5b35e0962a4f632cbd19}{name}},\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_event_component_ae4b041c98bc58d53783231ae2e8f626b}{capacity}},\ \textcolor{keywordtype}{int}\ stock\ =\ 100);}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_merch_vendor_abedeebcf3b57ddd1c629adc690fd5fa6}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_merch_vendor_aa4ae0a04020252f4e4c570a60bb5012a}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_merch_vendor_a3d0045c916f0d112ac6787e017b222ff}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_merch_vendor_acbce89318feae0776494582aef977562}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_merch_vendor_a016366a090815ebe97283b9f0cb98279}{update}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_notice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_merch_vendor_af0b7d9fe206a530d96d3dd516eeeacbc}{sell}}(\textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_merch_vendor_ae7bb9f5e88b77b369077099d8558c80d}{restock}}(\textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MERCHVENDOR\_H}}
+
+\end{DoxyCode}

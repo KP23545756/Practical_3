@@ -1,0 +1,137 @@
+\doxysection{Event\+Component Class Reference}
+\hypertarget{class_event_component}{}\label{class_event_component}\index{EventComponent@{EventComponent}}
+
+
+Abstract Component role in the Composite pattern Interface used by every operatioal unit in eventflow. Abstract class, do not instatiate.  
+
+
+
+
+{\ttfamily \+\#include $<$Event\+Component.\+h$>$}
+
+Inheritance diagram for Event\+Component:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_event_component}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}{Event\+Component}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Construct a component with a name and a starting capacity. Base constructor, as in no validation is done. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_component_ada5f41377769e0cbdaa7546477b3970c}{open}} ()=0
+\begin{DoxyCompactList}\small\item\em Open this component. A leaf opens itself. A composite is expected to open its children. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_component_a8e13a68d681c1b6affcf13435a09adab}{close}} ()=0
+\begin{DoxyCompactList}\small\item\em Close this component. Opposite of open. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_event_component_a625b1459850d5a94793c54404a280231}{report\+Status}} () const =0
+\begin{DoxyCompactList}\small\item\em Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. \end{DoxyCompactList}\item 
+virtual int \doxymbox{\hyperlink{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}{get\+Capacity}} () const =0
+\begin{DoxyCompactList}\small\item\em Get this component\textquotesingle{}s effective capacity. \end{DoxyCompactList}\item 
+\Hypertarget{class_event_component_a8c34b248d3e7b52a22c72d938db4b8ed}\label{class_event_component_a8c34b248d3e7b52a22c72d938db4b8ed} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_event_component_a82348aef118d5b35e0962a4f632cbd19}\label{class_event_component_a82348aef118d5b35e0962a4f632cbd19} 
+std::\+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of component like PC station 1. \end{DoxyCompactList}\item 
+\Hypertarget{class_event_component_ae4b041c98bc58d53783231ae2e8f626b}\label{class_event_component_ae4b041c98bc58d53783231ae2e8f626b} 
+int {\bfseries capacity}
+\begin{DoxyCompactList}\small\item\em Capacity size of component leaf will store own value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract Component role in the Composite pattern Interface used by every operatioal unit in eventflow. Abstract class, do not instatiate. 
+
+\label{class_event_component_doc-constructors}
+\Hypertarget{class_event_component_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}\index{EventComponent@{EventComponent}!EventComponent@{EventComponent}}
+\index{EventComponent@{EventComponent}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{EventComponent()}{EventComponent()}}
+{\footnotesize\ttfamily \label{class_event_component_a4d05d88082d03ce075ab75919d9cfe16} 
+Event\+Component::\+\+Event\+Component (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Construct a component with a name and a starting capacity. Base constructor, as in no validation is done. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Display name for this component \\
+\hline
+{\em capacity} & Starting capacity value \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_event_component_doc-func-members}
+\Hypertarget{class_event_component_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_event_component_a8e13a68d681c1b6affcf13435a09adab}\index{EventComponent@{EventComponent}!close@{close}}
+\index{close@{close}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_event_component_a8e13a68d681c1b6affcf13435a09adab} 
+virtual void Event\+Component::\+close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Close this component. Opposite of open. 
+
+
+
+Implemented in \doxymbox{\hyperlink{class_console_station_abc6da33a335019cd1e57ce717f28a848}{Console\+Station}}, \doxymbox{\hyperlink{class_event_group_a600460d78e6fc8d0ec13b1767590dcc9}{Event\+Group}}, \doxymbox{\hyperlink{class_food_vendor_add732a1245a621ed26eeab78f047a91b}{Food\+Vendor}}, \doxymbox{\hyperlink{class_info_desk_a69bb68616a7b7000f8433724aba36e48}{Info\+Desk}}, \doxymbox{\hyperlink{class_merch_vendor_aa4ae0a04020252f4e4c570a60bb5012a}{Merch\+Vendor}}, \doxymbox{\hyperlink{class_mobile_station_a91d3e8304c3d58dd237ea32f861f6316}{Mobile\+Station}}, \doxymbox{\hyperlink{class_p_c_station_a24a37db0d8f2fa7086b455edbc3e0279}{PCStation}}, \doxymbox{\hyperlink{class_switch_station_a3ec11bc5603f84d1fa6d0ab6f2d792eb}{Switch\+Station}}, \doxymbox{\hyperlink{class_ticket_booth_aa15a51549b245b5b4e7e79ef5b46741d}{Ticket\+Booth}}, \doxymbox{\hyperlink{class_tournament_desk_a0d445f33cde053b51d2495288d44f2b9}{Tournament\+Desk}}, and \doxymbox{\hyperlink{class_v_r_booth_af4740bda2170caf5622cf926db3d5bb1}{VRBooth}}.
+
+\Hypertarget{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}\index{EventComponent@{EventComponent}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily \label{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e} 
+virtual int Event\+Component::\+get\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get this component\textquotesingle{}s effective capacity. 
+
+\begin{DoxyReturn}{Returns}
+Current capacity value 
+\end{DoxyReturn}
+
+
+Implemented in \doxymbox{\hyperlink{class_console_station_a549c04ad65456414528bd451994b25e2}{Console\+Station}}, \doxymbox{\hyperlink{class_event_group_affe035069afc221547fe9e848017ee3c}{Event\+Group}}, \doxymbox{\hyperlink{class_food_vendor_aff5a5fc134b9e2b9b1c743cf76c7df5e}{Food\+Vendor}}, \doxymbox{\hyperlink{class_info_desk_af4d007ea702144e43fa776498266a971}{Info\+Desk}}, \doxymbox{\hyperlink{class_merch_vendor_acbce89318feae0776494582aef977562}{Merch\+Vendor}}, \doxymbox{\hyperlink{class_mobile_station_a4ffa93fe543a75de2f569cb3540509d5}{Mobile\+Station}}, \doxymbox{\hyperlink{class_p_c_station_a558cc975c9eb988dd484b50b07a87bf1}{PCStation}}, \doxymbox{\hyperlink{class_switch_station_ac8b769ecc7fa90d9b61bc430344f8a22}{Switch\+Station}}, \doxymbox{\hyperlink{class_ticket_booth_a692d535e211aa58b0e7d105101299ba5}{Ticket\+Booth}}, \doxymbox{\hyperlink{class_tournament_desk_a6fd9a077535d34a1f5fc233e65a1f355}{Tournament\+Desk}}, and \doxymbox{\hyperlink{class_v_r_booth_ae211e8ba3513b396c8b3eaab885c859e}{VRBooth}}.
+
+\Hypertarget{class_event_component_ada5f41377769e0cbdaa7546477b3970c}\index{EventComponent@{EventComponent}!open@{open}}
+\index{open@{open}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \label{class_event_component_ada5f41377769e0cbdaa7546477b3970c} 
+virtual void Event\+Component::\+open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Open this component. A leaf opens itself. A composite is expected to open its children. 
+
+
+
+Implemented in \doxymbox{\hyperlink{class_console_station_a52df429c4d210d0c03069be9bac83ac6}{Console\+Station}}, \doxymbox{\hyperlink{class_event_group_aa12055a0456c9e6faf6de3a12a70b0e1}{Event\+Group}}, \doxymbox{\hyperlink{class_food_vendor_aa95e925eb3f883220d1c4e98eb3e7ca7}{Food\+Vendor}}, \doxymbox{\hyperlink{class_info_desk_a7e36b577e9140e74582c7e585e88727f}{Info\+Desk}}, \doxymbox{\hyperlink{class_merch_vendor_abedeebcf3b57ddd1c629adc690fd5fa6}{Merch\+Vendor}}, \doxymbox{\hyperlink{class_mobile_station_a52c3e7bec1c57f8942fb27862280082a}{Mobile\+Station}}, \doxymbox{\hyperlink{class_p_c_station_a475dbea4184ace8999326e9d1b497255}{PCStation}}, \doxymbox{\hyperlink{class_switch_station_ac185fe1d66f9b1c6d4f4a572a025ded1}{Switch\+Station}}, \doxymbox{\hyperlink{class_ticket_booth_ae265e5e1c407d9d884aa8a4b8a9ea611}{Ticket\+Booth}}, \doxymbox{\hyperlink{class_tournament_desk_a2357c7b8849b3789287843b96128147b}{Tournament\+Desk}}, and \doxymbox{\hyperlink{class_v_r_booth_a383ab3aed49f83f43b8ef034b34612d7}{VRBooth}}.
+
+\Hypertarget{class_event_component_a625b1459850d5a94793c54404a280231}\index{EventComponent@{EventComponent}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!EventComponent@{EventComponent}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily \label{class_event_component_a625b1459850d5a94793c54404a280231} 
+virtual void Event\+Component::\+report\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. 
+
+
+
+Implemented in \doxymbox{\hyperlink{class_console_station_a8f0777651fd76e33b092f0d66f3f77a1}{Console\+Station}}, \doxymbox{\hyperlink{class_event_group_abc6919ac70ecf081cdec8c3ffaadc89e}{Event\+Group}}, \doxymbox{\hyperlink{class_food_vendor_a10c06ccf493cb054c3de65fda16c193f}{Food\+Vendor}}, \doxymbox{\hyperlink{class_info_desk_a339bea25b18ad220f9f1dfb3335f2dfc}{Info\+Desk}}, \doxymbox{\hyperlink{class_merch_vendor_a3d0045c916f0d112ac6787e017b222ff}{Merch\+Vendor}}, \doxymbox{\hyperlink{class_mobile_station_a37bcb8747e5f7ed0e0a1d52ee609602a}{Mobile\+Station}}, \doxymbox{\hyperlink{class_p_c_station_a4b604d5722d20320da9a9918086044b4}{PCStation}}, \doxymbox{\hyperlink{class_switch_station_a91555f8552c5e14b9d2a9f64c133f5e1}{Switch\+Station}}, \doxymbox{\hyperlink{class_ticket_booth_a65f389ea12eceee47ed3356597267aea}{Ticket\+Booth}}, \doxymbox{\hyperlink{class_tournament_desk_a98316d77507dc5058e94ee3374049aab}{Tournament\+Desk}}, and \doxymbox{\hyperlink{class_v_r_booth_a7eb6f6b0247cf04a18f9dc1b9e4d145e}{VRBooth}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/Event\+Component.\+h\item 
+src/Event\+Component.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,176 @@
+\doxysection{Console\+Station Class Reference}
+\hypertarget{class_console_station}{}\label{class_console_station}\index{ConsoleStation@{ConsoleStation}}
+
+
+Concrete Leaf: a console gaming station.  
+
+
+
+
+{\ttfamily \+\#include $<$Console\+Station.\+h$>$}
+
+Inheritance diagram for Console\+Station:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_console_station}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_console_station_a395b77a045646b518ebe88795440c312}{Console\+Station}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Construct a console station. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_console_station_a52df429c4d210d0c03069be9bac83ac6}{open}} () override
+\begin{DoxyCompactList}\small\item\em Open this component. A leaf opens itself. A composite is expected to open its children. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_console_station_abc6da33a335019cd1e57ce717f28a848}{close}} () override
+\begin{DoxyCompactList}\small\item\em Close this component. Opposite of open. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_console_station_a8f0777651fd76e33b092f0d66f3f77a1}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_console_station_a549c04ad65456414528bd451994b25e2}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Get this component\textquotesingle{}s effective capacity. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_console_station_aab1fa533323f8a4ef2f4a8a091bbebf3}{update}} (const \doxymbox{\hyperlink{struct_notice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Every concrete leaf must define its own reaction to a \doxylink{struct_notice}{Notice}. \end{DoxyCompactList}\item 
+\Hypertarget{class_console_station_ab28085c9bfb875f9e49398ca11ca9613}\label{class_console_station_ab28085c9bfb875f9e49398ca11ca9613} 
+void {\bfseries start\+Session} ()
+\begin{DoxyCompactList}\small\item\em Begin tracking one more active session. \end{DoxyCompactList}\item 
+\Hypertarget{class_console_station_a485c2c2b177cf3ec27edf8ce67712242}\label{class_console_station_a485c2c2b177cf3ec27edf8ce67712242} 
+void {\bfseries end\+Session} ()
+\begin{DoxyCompactList}\small\item\em A session finished normally (not via \doxylink{class_console_station_abc6da33a335019cd1e57ce717f28a848}{close()}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_unit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{Event\+Unit}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Forward name/\+capacity to \doxylink{class_event_component}{Event\+Component}. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_event_unit_a1e6fc3a03c85f7e21f8ed6865de99974}{\texorpdfstring{$\sim$}{\string~}\+Event\+Unit}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}{Event\+Component}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Construct a component with a name and a starting capacity. Base constructor, as in no validation is done. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_observer}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor: \doxylink{class_observer}{Observer} is a polymorphic base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of component like PC station 1. \end{DoxyCompactList}\item 
+int {\bfseries capacity}
+\begin{DoxyCompactList}\small\item\em Capacity size of component leaf will store own value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete Leaf: a console gaming station. 
+
+On \doxylink{class_console_station_abc6da33a335019cd1e57ce717f28a848}{close()}, saves active sessions before shutting down rather than dropping them instantly. 
+
+\label{class_console_station_doc-constructors}
+\Hypertarget{class_console_station_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_console_station_a395b77a045646b518ebe88795440c312}\index{ConsoleStation@{ConsoleStation}!ConsoleStation@{ConsoleStation}}
+\index{ConsoleStation@{ConsoleStation}!ConsoleStation@{ConsoleStation}}
+\doxysubsubsection{\texorpdfstring{ConsoleStation()}{ConsoleStation()}}
+{\footnotesize\ttfamily \label{class_console_station_a395b77a045646b518ebe88795440c312} 
+Console\+Station::\+\+Console\+Station (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Construct a console station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Display name. \\
+\hline
+{\em capacity} & Number of console seats. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_console_station_doc-func-members}
+\Hypertarget{class_console_station_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_console_station_abc6da33a335019cd1e57ce717f28a848}\index{ConsoleStation@{ConsoleStation}!close@{close}}
+\index{close@{close}!ConsoleStation@{ConsoleStation}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_console_station_abc6da33a335019cd1e57ce717f28a848} 
+void Console\+Station::\+close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Close this component. Opposite of open. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+\Hypertarget{class_console_station_a549c04ad65456414528bd451994b25e2}\index{ConsoleStation@{ConsoleStation}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!ConsoleStation@{ConsoleStation}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily \label{class_console_station_a549c04ad65456414528bd451994b25e2} 
+int Console\+Station::\+get\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get this component\textquotesingle{}s effective capacity. 
+
+\begin{DoxyReturn}{Returns}
+Current capacity value 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}{Event\+Component}}.
+
+\Hypertarget{class_console_station_a52df429c4d210d0c03069be9bac83ac6}\index{ConsoleStation@{ConsoleStation}!open@{open}}
+\index{open@{open}!ConsoleStation@{ConsoleStation}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \label{class_console_station_a52df429c4d210d0c03069be9bac83ac6} 
+void Console\+Station::\+open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Open this component. A leaf opens itself. A composite is expected to open its children. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+\Hypertarget{class_console_station_a8f0777651fd76e33b092f0d66f3f77a1}\index{ConsoleStation@{ConsoleStation}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!ConsoleStation@{ConsoleStation}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily \label{class_console_station_a8f0777651fd76e33b092f0d66f3f77a1} 
+void Console\+Station::\+report\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+\Hypertarget{class_console_station_aab1fa533323f8a4ef2f4a8a091bbebf3}\index{ConsoleStation@{ConsoleStation}!update@{update}}
+\index{update@{update}!ConsoleStation@{ConsoleStation}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_console_station_aab1fa533323f8a4ef2f4a8a091bbebf3} 
+void Console\+Station::\+update (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_notice}{Notice}} \&}]{notice}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Every concrete leaf must define its own reaction to a \doxylink{struct_notice}{Notice}. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_unit_adca0361187e0c7f4963aadfb70cb556f}{Event\+Unit}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/Console\+Station.\+h\item 
+src/Console\+Station.\+cpp\end{DoxyCompactItemize}

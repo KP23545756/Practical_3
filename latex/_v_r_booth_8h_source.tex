@@ -1,0 +1,29 @@
+\doxysection{VRBooth.\+h}
+\hypertarget{_v_r_booth_8h_source}{}\label{_v_r_booth_8h_source}\index{include/VRBooth.h@{include/VRBooth.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}EventUnit.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_notice}{Notice}};}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_v_r_booth_aea2afdf06201bdd2d319e908bbf2c740}{VRBooth}}\ :\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{EventUnit}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ isOpen;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{bool}\ inCooldown;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{class_v_r_booth_aea2afdf06201bdd2d319e908bbf2c740}{VRBooth}}(\textcolor{keywordtype}{string}\ \doxymbox{\hyperlink{class_event_component_a82348aef118d5b35e0962a4f632cbd19}{name}},\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_event_component_ae4b041c98bc58d53783231ae2e8f626b}{capacity}});}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_v_r_booth_a383ab3aed49f83f43b8ef034b34612d7}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_v_r_booth_af4740bda2170caf5622cf926db3d5bb1}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_v_r_booth_a7eb6f6b0247cf04a18f9dc1b9e4d145e}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_v_r_booth_ae211e8ba3513b396c8b3eaab885c859e}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_v_r_booth_a12a6d7eb83577b6fb588ff778e9ebb65}{update}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_notice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ \};}
+
+\end{DoxyCode}

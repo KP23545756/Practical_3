@@ -1,0 +1,206 @@
+\doxysection{Merch\+Vendor Class Reference}
+\hypertarget{class_merch_vendor}{}\label{class_merch_vendor}\index{MerchVendor@{MerchVendor}}
+
+
+Concrete Leaf: a merchandise vendor.  
+
+
+
+
+{\ttfamily \+\#include $<$Merch\+Vendor.\+h$>$}
+
+Inheritance diagram for Merch\+Vendor:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_merch_vendor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_merch_vendor_ad62fdf72fc1fafbc1f7962544381ac1d}{Merch\+Vendor}} (std::\+string name, int capacity, int stock=100)
+\begin{DoxyCompactList}\small\item\em Construct a merch vendor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_merch_vendor_abedeebcf3b57ddd1c629adc690fd5fa6}{open}} () override
+\begin{DoxyCompactList}\small\item\em Open this component. A leaf opens itself. A composite is expected to open its children. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_merch_vendor_aa4ae0a04020252f4e4c570a60bb5012a}{close}} () override
+\begin{DoxyCompactList}\small\item\em Close this component. Opposite of open. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_merch_vendor_a3d0045c916f0d112ac6787e017b222ff}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_merch_vendor_acbce89318feae0776494582aef977562}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Get this component\textquotesingle{}s effective capacity. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_merch_vendor_a016366a090815ebe97283b9f0cb98279}{update}} (const \doxymbox{\hyperlink{struct_notice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Every concrete leaf must define its own reaction to a \doxylink{struct_notice}{Notice}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_merch_vendor_af0b7d9fe206a530d96d3dd516eeeacbc}{sell}} (int quantity)
+\begin{DoxyCompactList}\small\item\em Sell some stock. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_merch_vendor_ae7bb9f5e88b77b369077099d8558c80d}{restock}} (int quantity)
+\begin{DoxyCompactList}\small\item\em Restock. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_unit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{Event\+Unit}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Forward name/\+capacity to \doxylink{class_event_component}{Event\+Component}. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_event_unit_a1e6fc3a03c85f7e21f8ed6865de99974}{\texorpdfstring{$\sim$}{\string~}\+Event\+Unit}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}{Event\+Component}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Construct a component with a name and a starting capacity. Base constructor, as in no validation is done. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_observer}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor: \doxylink{class_observer}{Observer} is a polymorphic base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of component like PC station 1. \end{DoxyCompactList}\item 
+int {\bfseries capacity}
+\begin{DoxyCompactList}\small\item\em Capacity size of component leaf will store own value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete Leaf: a merchandise vendor. 
+
+\doxylink{class_merch_vendor_acbce89318feae0776494582aef977562}{get\+Capacity()} represents remaining stock, not headcount 
+
+\label{class_merch_vendor_doc-constructors}
+\Hypertarget{class_merch_vendor_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_merch_vendor_ad62fdf72fc1fafbc1f7962544381ac1d}\index{MerchVendor@{MerchVendor}!MerchVendor@{MerchVendor}}
+\index{MerchVendor@{MerchVendor}!MerchVendor@{MerchVendor}}
+\doxysubsubsection{\texorpdfstring{MerchVendor()}{MerchVendor()}}
+{\footnotesize\ttfamily \label{class_merch_vendor_ad62fdf72fc1fafbc1f7962544381ac1d} 
+Merch\+Vendor::\+\+Merch\+Vendor (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{, }\item[{int}]{capacity}{, }\item[{int}]{stock}{ = {\ttfamily 100}}\end{DoxyParamCaption})}
+
+
+
+Construct a merch vendor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Display name. \\
+\hline
+{\em capacity} & amount of customers allowed in store etc. \\
+\hline
+{\em stock} & Starting stock level. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_merch_vendor_doc-func-members}
+\Hypertarget{class_merch_vendor_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_merch_vendor_aa4ae0a04020252f4e4c570a60bb5012a}\index{MerchVendor@{MerchVendor}!close@{close}}
+\index{close@{close}!MerchVendor@{MerchVendor}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_merch_vendor_aa4ae0a04020252f4e4c570a60bb5012a} 
+void Merch\+Vendor::\+close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Close this component. Opposite of open. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+\Hypertarget{class_merch_vendor_acbce89318feae0776494582aef977562}\index{MerchVendor@{MerchVendor}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!MerchVendor@{MerchVendor}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily \label{class_merch_vendor_acbce89318feae0776494582aef977562} 
+int Merch\+Vendor::\+get\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get this component\textquotesingle{}s effective capacity. 
+
+\begin{DoxyReturn}{Returns}
+Current capacity value 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}{Event\+Component}}.
+
+\Hypertarget{class_merch_vendor_abedeebcf3b57ddd1c629adc690fd5fa6}\index{MerchVendor@{MerchVendor}!open@{open}}
+\index{open@{open}!MerchVendor@{MerchVendor}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \label{class_merch_vendor_abedeebcf3b57ddd1c629adc690fd5fa6} 
+void Merch\+Vendor::\+open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Open this component. A leaf opens itself. A composite is expected to open its children. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+\Hypertarget{class_merch_vendor_a3d0045c916f0d112ac6787e017b222ff}\index{MerchVendor@{MerchVendor}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!MerchVendor@{MerchVendor}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily \label{class_merch_vendor_a3d0045c916f0d112ac6787e017b222ff} 
+void Merch\+Vendor::\+report\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+\Hypertarget{class_merch_vendor_ae7bb9f5e88b77b369077099d8558c80d}\index{MerchVendor@{MerchVendor}!restock@{restock}}
+\index{restock@{restock}!MerchVendor@{MerchVendor}}
+\doxysubsubsection{\texorpdfstring{restock()}{restock()}}
+{\footnotesize\ttfamily \label{class_merch_vendor_ae7bb9f5e88b77b369077099d8558c80d} 
+void Merch\+Vendor::\+restock (\begin{DoxyParamCaption}\item[{int}]{quantity}{}\end{DoxyParamCaption})}
+
+
+
+Restock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quantity} & Amount to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_merch_vendor_af0b7d9fe206a530d96d3dd516eeeacbc}\index{MerchVendor@{MerchVendor}!sell@{sell}}
+\index{sell@{sell}!MerchVendor@{MerchVendor}}
+\doxysubsubsection{\texorpdfstring{sell()}{sell()}}
+{\footnotesize\ttfamily \label{class_merch_vendor_af0b7d9fe206a530d96d3dd516eeeacbc} 
+void Merch\+Vendor::\+sell (\begin{DoxyParamCaption}\item[{int}]{quantity}{}\end{DoxyParamCaption})}
+
+
+
+Sell some stock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em quantity} & Amount to remove. Never drops stock below zero. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_merch_vendor_a016366a090815ebe97283b9f0cb98279}\index{MerchVendor@{MerchVendor}!update@{update}}
+\index{update@{update}!MerchVendor@{MerchVendor}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_merch_vendor_a016366a090815ebe97283b9f0cb98279} 
+void Merch\+Vendor::\+update (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_notice}{Notice}} \&}]{notice}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Every concrete leaf must define its own reaction to a \doxylink{struct_notice}{Notice}. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_unit_adca0361187e0c7f4963aadfb70cb556f}{Event\+Unit}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/Merch\+Vendor.\+h\item 
+src/Merch\+Vendor.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,176 @@
+\doxysection{Food\+Vendor Class Reference}
+\hypertarget{class_food_vendor}{}\label{class_food_vendor}\index{FoodVendor@{FoodVendor}}
+
+
+Concrete Leaf: a food vendor.  
+
+
+
+
+{\ttfamily \+\#include $<$Food\+Vendor.\+h$>$}
+
+Inheritance diagram for Food\+Vendor:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_food_vendor}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_food_vendor_a2e6eeb84bc364cd6fb06f2fe9ac84ee1}{Food\+Vendor}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Construct a food vendor. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_food_vendor_aa95e925eb3f883220d1c4e98eb3e7ca7}{open}} () override
+\begin{DoxyCompactList}\small\item\em Open this component. A leaf opens itself. A composite is expected to open its children. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_food_vendor_add732a1245a621ed26eeab78f047a91b}{close}} () override
+\begin{DoxyCompactList}\small\item\em Close this component. Opposite of open. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_food_vendor_a10c06ccf493cb054c3de65fda16c193f}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_food_vendor_aff5a5fc134b9e2b9b1c743cf76c7df5e}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Get this component\textquotesingle{}s effective capacity. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_food_vendor_ae569b3f50083769d3495c31a80840e24}{update}} (const \doxymbox{\hyperlink{struct_notice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Every concrete leaf must define its own reaction to a \doxylink{struct_notice}{Notice}. \end{DoxyCompactList}\item 
+\Hypertarget{class_food_vendor_acf8679786744206bf9cd41274c8de434}\label{class_food_vendor_acf8679786744206bf9cd41274c8de434} 
+void {\bfseries begin\+Order} ()
+\begin{DoxyCompactList}\small\item\em Mark that an order is now being prepared. \end{DoxyCompactList}\item 
+\Hypertarget{class_food_vendor_a6e566b006b723f5409dcf3a5670f2b29}\label{class_food_vendor_a6e566b006b723f5409dcf3a5670f2b29} 
+void {\bfseries finish\+Order} ()
+\begin{DoxyCompactList}\small\item\em Mark that the in-\/progress order was completed normally. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_unit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{Event\+Unit}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Forward name/\+capacity to \doxylink{class_event_component}{Event\+Component}. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_event_unit_a1e6fc3a03c85f7e21f8ed6865de99974}{\texorpdfstring{$\sim$}{\string~}\+Event\+Unit}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}{Event\+Component}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Construct a component with a name and a starting capacity. Base constructor, as in no validation is done. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_observer}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor: \doxylink{class_observer}{Observer} is a polymorphic base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of component like PC station 1. \end{DoxyCompactList}\item 
+int {\bfseries capacity}
+\begin{DoxyCompactList}\small\item\em Capacity size of component leaf will store own value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete Leaf: a food vendor. 
+
+Outdoor unit -\/ a weather alert closes it, unlike indoor leaves which ignore weather entirely. Finishes the current order before fully stopping service. 
+
+\label{class_food_vendor_doc-constructors}
+\Hypertarget{class_food_vendor_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_food_vendor_a2e6eeb84bc364cd6fb06f2fe9ac84ee1}\index{FoodVendor@{FoodVendor}!FoodVendor@{FoodVendor}}
+\index{FoodVendor@{FoodVendor}!FoodVendor@{FoodVendor}}
+\doxysubsubsection{\texorpdfstring{FoodVendor()}{FoodVendor()}}
+{\footnotesize\ttfamily \label{class_food_vendor_a2e6eeb84bc364cd6fb06f2fe9ac84ee1} 
+Food\+Vendor::\+\+Food\+Vendor (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Construct a food vendor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Display name. \\
+\hline
+{\em capacity} & Queue capacity. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_food_vendor_doc-func-members}
+\Hypertarget{class_food_vendor_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_food_vendor_add732a1245a621ed26eeab78f047a91b}\index{FoodVendor@{FoodVendor}!close@{close}}
+\index{close@{close}!FoodVendor@{FoodVendor}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_food_vendor_add732a1245a621ed26eeab78f047a91b} 
+void Food\+Vendor::\+close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Close this component. Opposite of open. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+\Hypertarget{class_food_vendor_aff5a5fc134b9e2b9b1c743cf76c7df5e}\index{FoodVendor@{FoodVendor}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!FoodVendor@{FoodVendor}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily \label{class_food_vendor_aff5a5fc134b9e2b9b1c743cf76c7df5e} 
+int Food\+Vendor::\+get\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get this component\textquotesingle{}s effective capacity. 
+
+\begin{DoxyReturn}{Returns}
+Current capacity value 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}{Event\+Component}}.
+
+\Hypertarget{class_food_vendor_aa95e925eb3f883220d1c4e98eb3e7ca7}\index{FoodVendor@{FoodVendor}!open@{open}}
+\index{open@{open}!FoodVendor@{FoodVendor}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \label{class_food_vendor_aa95e925eb3f883220d1c4e98eb3e7ca7} 
+void Food\+Vendor::\+open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Open this component. A leaf opens itself. A composite is expected to open its children. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+\Hypertarget{class_food_vendor_a10c06ccf493cb054c3de65fda16c193f}\index{FoodVendor@{FoodVendor}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!FoodVendor@{FoodVendor}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily \label{class_food_vendor_a10c06ccf493cb054c3de65fda16c193f} 
+void Food\+Vendor::\+report\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+\Hypertarget{class_food_vendor_ae569b3f50083769d3495c31a80840e24}\index{FoodVendor@{FoodVendor}!update@{update}}
+\index{update@{update}!FoodVendor@{FoodVendor}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_food_vendor_ae569b3f50083769d3495c31a80840e24} 
+void Food\+Vendor::\+update (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_notice}{Notice}} \&}]{notice}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Every concrete leaf must define its own reaction to a \doxylink{struct_notice}{Notice}. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_unit_adca0361187e0c7f4963aadfb70cb556f}{Event\+Unit}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/Food\+Vendor.\+h\item 
+src/Food\+Vendor.\+cpp\end{DoxyCompactItemize}

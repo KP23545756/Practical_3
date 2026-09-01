@@ -1,0 +1,26 @@
+\doxysection{PCStation.\+h}
+\hypertarget{_p_c_station_8h_source}{}\label{_p_c_station_8h_source}\index{include/PCStation.h@{include/PCStation.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PCSTATION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PCSTATION\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}EventUnit.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_notice}{Notice}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_p_c_station_afbc6537313b5a5710cbd76f45c97cc93}{PCStation}}:\textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{EventUnit}}\{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ isOpen;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ sessionsSuspended;}
+\DoxyCodeLine{00015\ \ \ \ \ std::string\ currentGame;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{class_p_c_station_afbc6537313b5a5710cbd76f45c97cc93}{PCStation}}(std::string\ \doxymbox{\hyperlink{class_event_component_a82348aef118d5b35e0962a4f632cbd19}{name}},\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_event_component_ae4b041c98bc58d53783231ae2e8f626b}{capacity}},\ std::string\ startingGame\ =\ \textcolor{stringliteral}{"{}None"{}});}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_p_c_station_a475dbea4184ace8999326e9d1b497255}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_p_c_station_a24a37db0d8f2fa7086b455edbc3e0279}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_p_c_station_a4b604d5722d20320da9a9918086044b4}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_p_c_station_a558cc975c9eb988dd484b50b07a87bf1}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_p_c_station_ab651476973de3ca0b37c91952439d228}{update}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_notice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_p_c_station_a6a0302b4f55017f92214652d0e49345b}{setGame}}(std::string\ gameName);}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PCSTATION\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,26 @@
+\doxysection{Console\+Station.\+h}
+\hypertarget{_console_station_8h_source}{}\label{_console_station_8h_source}\index{include/ConsoleStation.h@{include/ConsoleStation.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONSOLESTATION\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONSOLESTATION\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}EventUnit.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_notice}{Notice}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_console_station_a395b77a045646b518ebe88795440c312}{ConsoleStation}}:\textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{EventUnit}}\{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{bool}\ isOpen;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ signUpsCapped;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ activeSessions;}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{class_console_station_a395b77a045646b518ebe88795440c312}{ConsoleStation}}(std::string\ \doxymbox{\hyperlink{class_event_component_a82348aef118d5b35e0962a4f632cbd19}{name}},\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_event_component_ae4b041c98bc58d53783231ae2e8f626b}{capacity}});}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_console_station_a52df429c4d210d0c03069be9bac83ac6}{open}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_console_station_abc6da33a335019cd1e57ce717f28a848}{close}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_console_station_a8f0777651fd76e33b092f0d66f3f77a1}{reportStatus}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_console_station_a549c04ad65456414528bd451994b25e2}{getCapacity}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_console_station_aab1fa533323f8a4ef2f4a8a091bbebf3}{update}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_notice}{Notice}}\&\ notice)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_console_station_ab28085c9bfb875f9e49398ca11ca9613}{startSession}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_console_station_a485c2c2b177cf3ec27edf8ce67712242}{endSession}}();}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CONSOLESTATION\_H}}
+
+\end{DoxyCode}

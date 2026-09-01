@@ -1,0 +1,141 @@
+\doxysection{Mobile\+Station Class Reference}
+\hypertarget{class_mobile_station}{}\label{class_mobile_station}\index{MobileStation@{MobileStation}}
+Inheritance diagram for Mobile\+Station:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_mobile_station}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mobile_station_a27a1ad442a8449d4327bf2c0f7825dd0}\label{class_mobile_station_a27a1ad442a8449d4327bf2c0f7825dd0} 
+{\bfseries Mobile\+Station} (string name, int capacity)
+\item 
+void \doxymbox{\hyperlink{class_mobile_station_a52c3e7bec1c57f8942fb27862280082a}{open}} () override
+\begin{DoxyCompactList}\small\item\em Open this component. A leaf opens itself. A composite is expected to open its children. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_mobile_station_a91d3e8304c3d58dd237ea32f861f6316}{close}} () override
+\begin{DoxyCompactList}\small\item\em Close this component. Opposite of open. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_mobile_station_a37bcb8747e5f7ed0e0a1d52ee609602a}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_mobile_station_a4ffa93fe543a75de2f569cb3540509d5}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Get this component\textquotesingle{}s effective capacity. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_mobile_station_a18bf8e9e98a2166e183a0bfe12a7da31}{update}} (const \doxymbox{\hyperlink{struct_notice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Every concrete leaf must define its own reaction to a \doxylink{struct_notice}{Notice}. \end{DoxyCompactList}\item 
+\Hypertarget{class_mobile_station_a202e1289a137e961dce6e70492fa170c}\label{class_mobile_station_a202e1289a137e961dce6e70492fa170c} 
+void {\bfseries join\+Queue} ()
+\item 
+\Hypertarget{class_mobile_station_a4a1bfef9ce747bfd68fffc3d81cf812e}\label{class_mobile_station_a4a1bfef9ce747bfd68fffc3d81cf812e} 
+void {\bfseries leave\+Queue} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_unit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{Event\+Unit}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Forward name/\+capacity to \doxylink{class_event_component}{Event\+Component}. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_event_unit_a1e6fc3a03c85f7e21f8ed6865de99974}{\texorpdfstring{$\sim$}{\string~}\+Event\+Unit}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}{Event\+Component}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Construct a component with a name and a starting capacity. Base constructor, as in no validation is done. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_observer}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor: \doxylink{class_observer}{Observer} is a polymorphic base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of component like PC station 1. \end{DoxyCompactList}\item 
+int {\bfseries capacity}
+\begin{DoxyCompactList}\small\item\em Capacity size of component leaf will store own value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{class_mobile_station_doc-func-members}
+\Hypertarget{class_mobile_station_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_mobile_station_a91d3e8304c3d58dd237ea32f861f6316}\index{MobileStation@{MobileStation}!close@{close}}
+\index{close@{close}!MobileStation@{MobileStation}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_mobile_station_a91d3e8304c3d58dd237ea32f861f6316} 
+void Mobile\+Station::\+close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Close this component. Opposite of open. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+\Hypertarget{class_mobile_station_a4ffa93fe543a75de2f569cb3540509d5}\index{MobileStation@{MobileStation}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!MobileStation@{MobileStation}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily \label{class_mobile_station_a4ffa93fe543a75de2f569cb3540509d5} 
+int Mobile\+Station::\+get\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get this component\textquotesingle{}s effective capacity. 
+
+\begin{DoxyReturn}{Returns}
+Current capacity value 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}{Event\+Component}}.
+
+\Hypertarget{class_mobile_station_a52c3e7bec1c57f8942fb27862280082a}\index{MobileStation@{MobileStation}!open@{open}}
+\index{open@{open}!MobileStation@{MobileStation}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \label{class_mobile_station_a52c3e7bec1c57f8942fb27862280082a} 
+void Mobile\+Station::\+open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Open this component. A leaf opens itself. A composite is expected to open its children. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+\Hypertarget{class_mobile_station_a37bcb8747e5f7ed0e0a1d52ee609602a}\index{MobileStation@{MobileStation}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!MobileStation@{MobileStation}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily \label{class_mobile_station_a37bcb8747e5f7ed0e0a1d52ee609602a} 
+void Mobile\+Station::\+report\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+\Hypertarget{class_mobile_station_a18bf8e9e98a2166e183a0bfe12a7da31}\index{MobileStation@{MobileStation}!update@{update}}
+\index{update@{update}!MobileStation@{MobileStation}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_mobile_station_a18bf8e9e98a2166e183a0bfe12a7da31} 
+void Mobile\+Station::\+update (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_notice}{Notice}} \&}]{notice}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Every concrete leaf must define its own reaction to a \doxylink{struct_notice}{Notice}. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_unit_adca0361187e0c7f4963aadfb70cb556f}{Event\+Unit}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/Mobile\+Station.\+h\item 
+src/Mobile\+Station.\+cpp\end{DoxyCompactItemize}

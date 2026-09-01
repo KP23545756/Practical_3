@@ -36,14 +36,12 @@ $RECYCLE.BIN/
 *.a
 *.so
 *.dylib
-eventflow
 build/
 bin/
 obj/
 
 # --- Doxygen generated output ---
-docs/html/
-docs/latex/
+
 
 # --- Misc ---
 *.log

@@ -1,0 +1,28 @@
+\doxysection{Event\+Unit.\+h}
+\hypertarget{_event_unit_8h_source}{}\label{_event_unit_8h_source}\index{include/EventUnit.h@{include/EventUnit.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EVENTUNIT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EVENTUNIT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}EventComponent.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Observer.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_notice}{Notice}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{EventUnit}}:\textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}{EventComponent}},\ \textcolor{keyword}{public}\ \doxymbox{\hyperlink{class_observer}{Observer}}\{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{EventUnit}}(std::string\ \doxymbox{\hyperlink{class_event_component_a82348aef118d5b35e0962a4f632cbd19}{name}},\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_event_component_ae4b041c98bc58d53783231ae2e8f626b}{capacity}});}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ open(),\ close(),\ reportStatus(),\ getCapacity()\ remain\ pure}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{comment}{//\ virtual,\ inherited\ unchanged\ from\ EventComponent\ -\/\ every}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ concrete\ leaf\ implements\ its\ own.}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_event_unit_adca0361187e0c7f4963aadfb70cb556f}{update}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{struct_notice}{Notice}}\&\ notice)\ \textcolor{keyword}{override}\ =\ 0;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{\string~EventUnit}}();}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ EVENTUNIT\_H}}
+
+\end{DoxyCode}

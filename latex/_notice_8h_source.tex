@@ -1,0 +1,28 @@
+\doxysection{Notice.\+h}
+\hypertarget{_notice_8h_source}{}\label{_notice_8h_source}\index{include/Notice.h@{include/Notice.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ NOTICE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ NOTICE\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{enum}\ NoticeType\{}
+\DoxyCodeLine{00009\ \ \ \ \ OPEN,}
+\DoxyCodeLine{00010\ \ \ \ \ CLOSED,}
+\DoxyCodeLine{00011\ \ \ \ \ SCHEDULE\_CHANGE,}
+\DoxyCodeLine{00012\ \ \ \ \ CAPACITY\_ALERT,}
+\DoxyCodeLine{00013\ \ \ \ \ WEATHER\_ALERT,}
+\DoxyCodeLine{00014\ \ \ \ \ PAUSE,}
+\DoxyCodeLine{00015\ \ \ \ \ RESUME,}
+\DoxyCodeLine{00016\ \ \ \ \ EVACUATE}
+\DoxyCodeLine{00017\ \};}
+\DoxyCodeLine{00024\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{struct_notice_a8b162b929a5954e59ba310af9ab98301}{Notice}}\{}
+\DoxyCodeLine{00025\ \ \ \ \ NoticeType\ type;}
+\DoxyCodeLine{00026\ \ \ \ \ std::string\ message;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ value;}
+\DoxyCodeLine{00035\ \ \ \ \ \doxymbox{\hyperlink{struct_notice_a8b162b929a5954e59ba310af9ab98301}{Notice}}(NoticeType\ type,\ \textcolor{keyword}{const}\ std::string\&\ message,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ NOTICE\_H}}
+
+\end{DoxyCode}

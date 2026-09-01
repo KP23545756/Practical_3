@@ -1,0 +1,178 @@
+\doxysection{Switch\+Station Class Reference}
+\hypertarget{class_switch_station}{}\label{class_switch_station}\index{SwitchStation@{SwitchStation}}
+
+
+Concrete Leaf: a portable Switch station.  
+
+
+
+
+{\ttfamily \+\#include $<$Switch\+Station.\+h$>$}
+
+Inheritance diagram for Switch\+Station:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_switch_station}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_switch_station_a69fd553643fb831a75c3ae4f183ad399}{Switch\+Station}} (std::\+string name, int capacity, bool starts\+Portable=true)
+\begin{DoxyCompactList}\small\item\em Construct a Switch station. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_switch_station_ac185fe1d66f9b1c6d4f4a572a025ded1}{open}} () override
+\begin{DoxyCompactList}\small\item\em Open this component. A leaf opens itself. A composite is expected to open its children. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_switch_station_a3ec11bc5603f84d1fa6d0ab6f2d792eb}{close}} () override
+\begin{DoxyCompactList}\small\item\em Close this component. Opposite of open. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_switch_station_a91555f8552c5e14b9d2a9f64c133f5e1}{report\+Status}} () const override
+\begin{DoxyCompactList}\small\item\em Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_switch_station_ac8b769ecc7fa90d9b61bc430344f8a22}{get\+Capacity}} () const override
+\begin{DoxyCompactList}\small\item\em Get this component\textquotesingle{}s effective capacity. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_switch_station_a929b4f335e944baae0eeeadb3626a53e}{update}} (const \doxymbox{\hyperlink{struct_notice}{Notice}} \&notice) override
+\begin{DoxyCompactList}\small\item\em Every concrete leaf must define its own reaction to a \doxylink{struct_notice}{Notice}. \end{DoxyCompactList}\item 
+\Hypertarget{class_switch_station_a30c2ed60a286d6efc2ab0edab77af8fa}\label{class_switch_station_a30c2ed60a286d6efc2ab0edab77af8fa} 
+void {\bfseries dock} ()
+\begin{DoxyCompactList}\small\item\em Switch into docked mode. \end{DoxyCompactList}\item 
+\Hypertarget{class_switch_station_abbc5df869be6608f9eb0da76d67842c0}\label{class_switch_station_abbc5df869be6608f9eb0da76d67842c0} 
+void {\bfseries undock} ()
+\begin{DoxyCompactList}\small\item\em Switch into portable/\+battery mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_unit}{Event\+Unit}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_unit_ad146bb4d502546964f97d66e47769d67}{Event\+Unit}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Forward name/\+capacity to \doxylink{class_event_component}{Event\+Component}. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_event_unit_a1e6fc3a03c85f7e21f8ed6865de99974}{\texorpdfstring{$\sim$}{\string~}\+Event\+Unit}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_component_a4d05d88082d03ce075ab75919d9cfe16}{Event\+Component}} (std::\+string name, int capacity)
+\begin{DoxyCompactList}\small\item\em Construct a component with a name and a starting capacity. Base constructor, as in no validation is done. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Component} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_observer}{Observer}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Observer} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor: \doxylink{class_observer}{Observer} is a polymorphic base. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_event_component}{Event\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Name of component like PC station 1. \end{DoxyCompactList}\item 
+int {\bfseries capacity}
+\begin{DoxyCompactList}\small\item\em Capacity size of component leaf will store own value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete Leaf: a portable Switch station. 
+
+Reduced effective capacity while running in portable/\+battery mode. Ignores most notices. 
+
+\label{class_switch_station_doc-constructors}
+\Hypertarget{class_switch_station_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_switch_station_a69fd553643fb831a75c3ae4f183ad399}\index{SwitchStation@{SwitchStation}!SwitchStation@{SwitchStation}}
+\index{SwitchStation@{SwitchStation}!SwitchStation@{SwitchStation}}
+\doxysubsubsection{\texorpdfstring{SwitchStation()}{SwitchStation()}}
+{\footnotesize\ttfamily \label{class_switch_station_a69fd553643fb831a75c3ae4f183ad399} 
+Switch\+Station::\+\+Switch\+Station (\begin{DoxyParamCaption}\item[{std::\+string}]{name}{, }\item[{int}]{capacity}{, }\item[{bool}]{starts\+Portable}{ = {\ttfamily true}}\end{DoxyParamCaption})}
+
+
+
+Construct a Switch station. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Display name. \\
+\hline
+{\em capacity} & Number of Switch seats. \\
+\hline
+{\em starts\+Portable} & Whether the station starts in portable/\+battery mode. \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_switch_station_doc-func-members}
+\Hypertarget{class_switch_station_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_switch_station_a3ec11bc5603f84d1fa6d0ab6f2d792eb}\index{SwitchStation@{SwitchStation}!close@{close}}
+\index{close@{close}!SwitchStation@{SwitchStation}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_switch_station_a3ec11bc5603f84d1fa6d0ab6f2d792eb} 
+void Switch\+Station::\+close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Close this component. Opposite of open. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a8e13a68d681c1b6affcf13435a09adab}{Event\+Component}}.
+
+\Hypertarget{class_switch_station_ac8b769ecc7fa90d9b61bc430344f8a22}\index{SwitchStation@{SwitchStation}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!SwitchStation@{SwitchStation}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily \label{class_switch_station_ac8b769ecc7fa90d9b61bc430344f8a22} 
+int Switch\+Station::\+get\+Capacity (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Get this component\textquotesingle{}s effective capacity. 
+
+\begin{DoxyReturn}{Returns}
+Current capacity value 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a6128b4c0f20d353a29d45348f48a5f2e}{Event\+Component}}.
+
+\Hypertarget{class_switch_station_ac185fe1d66f9b1c6d4f4a572a025ded1}\index{SwitchStation@{SwitchStation}!open@{open}}
+\index{open@{open}!SwitchStation@{SwitchStation}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily \label{class_switch_station_ac185fe1d66f9b1c6d4f4a572a025ded1} 
+void Switch\+Station::\+open (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Open this component. A leaf opens itself. A composite is expected to open its children. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_ada5f41377769e0cbdaa7546477b3970c}{Event\+Component}}.
+
+\Hypertarget{class_switch_station_a91555f8552c5e14b9d2a9f64c133f5e1}\index{SwitchStation@{SwitchStation}!reportStatus@{reportStatus}}
+\index{reportStatus@{reportStatus}!SwitchStation@{SwitchStation}}
+\doxysubsubsection{\texorpdfstring{reportStatus()}{reportStatus()}}
+{\footnotesize\ttfamily \label{class_switch_station_a91555f8552c5e14b9d2a9f64c133f5e1} 
+void Switch\+Station::\+report\+Status (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Print a human-\/readable status line for this component. A composite is expected to also report its children\textquotesingle{}s status beneath its own. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_component_a625b1459850d5a94793c54404a280231}{Event\+Component}}.
+
+\Hypertarget{class_switch_station_a929b4f335e944baae0eeeadb3626a53e}\index{SwitchStation@{SwitchStation}!update@{update}}
+\index{update@{update}!SwitchStation@{SwitchStation}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_switch_station_a929b4f335e944baae0eeeadb3626a53e} 
+void Switch\+Station::\+update (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_notice}{Notice}} \&}]{notice}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Every concrete leaf must define its own reaction to a \doxylink{struct_notice}{Notice}. 
+
+
+
+Implements \doxymbox{\hyperlink{class_event_unit_adca0361187e0c7f4963aadfb70cb556f}{Event\+Unit}}.
+
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/Switch\+Station.\+h\item 
+src/Switch\+Station.\+cpp\end{DoxyCompactItemize}

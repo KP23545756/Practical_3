@@ -1,0 +1,107 @@
+\doxysection{Event\+Control Class Reference}
+\hypertarget{class_event_control}{}\label{class_event_control}\index{EventControl@{EventControl}}
+
+
+The event-\/level coordinator: a concrete \doxylink{class_subject}{Subject} that issues top-\/level notices into the tree.  
+
+
+
+
+{\ttfamily \+\#include $<$Event\+Control.\+h$>$}
+
+Inheritance diagram for Event\+Control:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_event_control}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_event_control_ae7b4bad509d5e7de338f9579684f1a9e}{Event\+Control}} (\doxymbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}root)
+\begin{DoxyCompactList}\small\item\em Construct a control point over a (non-\/owned) root component. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_event_control_ac21db8f4791c306a2b214309b4e400e6}{issue\+Notice}} (const \doxymbox{\hyperlink{struct_notice}{Notice}} \&notice)
+\begin{DoxyCompactList}\small\item\em Broadcast a notice to everything directly attached to this control point. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_event_control_ad8fcc15169bd6829ac92497adf216b94}{\texorpdfstring{$\sim$}{\string~}\+Event\+Control}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_subject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \doxymbox{\hyperlink{class_subject_a0884bfe374d352c6488a1e40c84246c8}{attach}} (\doxymbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Register an observer to receive future notices. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_subject_a752a7596d52ab986539232f8377ca92c}{detach}} (\doxymbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*}observer)
+\begin{DoxyCompactList}\small\item\em Remove a previously registered observer. \end{DoxyCompactList}\item 
+virtual void \doxymbox{\hyperlink{class_subject_ab5b0a79cd1214e08f11dbe18611e8f8c}{notify}} (const \doxymbox{\hyperlink{struct_notice}{Notice}} \&notice)
+\begin{DoxyCompactList}\small\item\em Push a notice to every currently registered observer. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Subject} ()
+\begin{DoxyCompactList}\small\item\em Clears the observer list. Never deletes the observers themselves -\/ \doxylink{class_subject}{Subject} does not own them. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_subject}{Subject}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+vector$<$ \doxymbox{\hyperlink{class_observer}{Observer}} \texorpdfstring{$\ast$}{*} $>$ {\bfseries observers}
+\begin{DoxyCompactList}\small\item\em Non-\/owning pointers to registered observers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The event-\/level coordinator: a concrete \doxylink{class_subject}{Subject} that issues top-\/level notices into the tree. 
+
+\doxylink{class_event_control}{Event\+Control} is deliberately not part of the Composite tree itself
+\begin{DoxyItemize}
+\item it is a client/\+collaborator that holds a reference to the root 
+\end{DoxyItemize}
+
+\label{class_event_control_doc-constructors}
+\Hypertarget{class_event_control_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_event_control_ae7b4bad509d5e7de338f9579684f1a9e}\index{EventControl@{EventControl}!EventControl@{EventControl}}
+\index{EventControl@{EventControl}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{EventControl()}{EventControl()}}
+{\footnotesize\ttfamily \label{class_event_control_ae7b4bad509d5e7de338f9579684f1a9e} 
+Event\+Control::\+\+Event\+Control (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_event_component}{Event\+Component}} \texorpdfstring{$\ast$}{*}}]{root}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a control point over a (non-\/owned) root component. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Pointer to the root of the Composite tree. Not owned. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_event_control_ad8fcc15169bd6829ac92497adf216b94}\index{EventControl@{EventControl}!````~EventControl@{\texorpdfstring{$\sim$}{\string~}EventControl}}
+\index{````~EventControl@{\texorpdfstring{$\sim$}{\string~}EventControl}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}EventControl()}{\string~EventControl()}}
+{\footnotesize\ttfamily \label{class_event_control_ad8fcc15169bd6829ac92497adf216b94} 
+Event\+Control::\+\texorpdfstring{$\sim$}{\string~}\+Event\+Control (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Virtual destructor. 
+
+Does not delete root 
+
+\label{class_event_control_doc-func-members}
+\Hypertarget{class_event_control_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_event_control_ac21db8f4791c306a2b214309b4e400e6}\index{EventControl@{EventControl}!issueNotice@{issueNotice}}
+\index{issueNotice@{issueNotice}!EventControl@{EventControl}}
+\doxysubsubsection{\texorpdfstring{issueNotice()}{issueNotice()}}
+{\footnotesize\ttfamily \label{class_event_control_ac21db8f4791c306a2b214309b4e400e6} 
+void Event\+Control::\+issue\+Notice (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_notice}{Notice}} \&}]{notice}{}\end{DoxyParamCaption})}
+
+
+
+Broadcast a notice to everything directly attached to this control point. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em notice} & The notice to issue. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+include/Event\+Control.\+h\item 
+src/Event\+Control.\+cpp\end{DoxyCompactItemize}
