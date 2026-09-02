@@ -47,6 +47,7 @@ int main() {
     pcHall->addChildren(tournamentZone);  
     consoleHall->addChildren(consoleStation);
     consoleHall->addChildren(switchStation);
+    
     outdoorPlaza->addChildren(foodVendor);
     outdoorPlaza->addChildren(merchVendor);
     outdoorPlaza->addChildren(mobileStation);

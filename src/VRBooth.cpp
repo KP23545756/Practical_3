@@ -45,6 +45,9 @@ void VRBooth::update(const Notice& notice) {
                inCooldown = true;
             cout << name << " force-ended its session." << endl;
             break;
+        case NoticeType::WEATHER_ALERT:
+            close(); // outdoor unit
+            break;
         default:
             break;
     }

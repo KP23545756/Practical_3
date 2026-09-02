@@ -27,6 +27,9 @@ void MerchVendor::update(const Notice& notice){
         case NoticeType::EVACUATE:
             close();
             break;
+        case NoticeType::WEATHER_ALERT:
+            close(); // outdoor unit
+            break;
         default:
             break;
     }

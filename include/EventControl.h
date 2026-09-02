@@ -23,7 +23,7 @@ public:
      * @brief Construct a control point over a (non-owned) root component.
      * @param root Pointer to the root of the Composite tree. Not owned.
      */
-    explicit EventControl(EventComponent* root);
+    EventControl(EventComponent* root);
 
     /**
      * @brief Broadcast a notice to everything directly attached to
